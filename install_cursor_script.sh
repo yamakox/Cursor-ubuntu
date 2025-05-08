@@ -6,7 +6,7 @@ installCursor() {
 
         # URLs for Cursor AppImage and Icon
         CURSOR_URL="https://downloader.cursor.sh/linux/appImage/x64"
-        ICON_URL="https://raw.githubusercontent.com/yourusername/repo/main/images/cursor-icon.png"
+        ICON_URL="https://raw.githubusercontent.com/hieutt192/Cursor-ubuntu/main/images/cursor-icon.png"
 
         # Paths for installation
         APPIMAGE_PATH="/opt/Cursor/cursor.appimage"
