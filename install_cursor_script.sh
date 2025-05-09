@@ -2,11 +2,15 @@
 
 installCursor() {
     if ! [ -f /opt/Cursor/cursor.appimage ]; then
-        echo "Installing Cursor AI IDE..."
+        echo "Installing Cursor AI IDE on Ubuntu 22.04..."
 
-        # URLs for Cursor AppImage and Icon
-        CURSOR_URL="https://downloader.cursor.sh/linux/appImage/x64"
-        ICON_URL="https://raw.githubusercontent.com/hieutt192/Cursor-ubuntu/main/images/cursor-icon.png"
+        # 📝 Enter the AppImage download URL
+        read -p "Enter Cursor AppImage URL (Download file .AppImage from https://www.cursor.com/downloads): " CURSOR_URL
+        # 📝 Enter the icon file name (e.g., cursor-icon.png or cursor-black-icon.png)
+        read -p "Enter icon filename (from GitHub): " ICON_NAME
+
+        # for Cursor Icon
+        ICON_URL="https://raw.githubusercontent.com/hieutt192/Cursor-ubuntu/main/images/$ICON_NAME"
 
         # Paths for installation
         APPIMAGE_PATH="/opt/Cursor/cursor.appimage"
@@ -24,8 +28,8 @@ installCursor() {
         sudo mkdir -p /opt/Cursor
 
         # Download Cursor AppImage
-        echo "Downloading Cursor AppImage..."
-        sudo curl -L $CURSOR_URL -o $APPIMAGE_PATH
+        echo "move Cursor AppImage to /opt/ folder..."
+        sudo mv $CURSOR_URL $APPIMAGE_PATH
         sudo chmod +x $APPIMAGE_PATH
 
         # Download Cursor icon
