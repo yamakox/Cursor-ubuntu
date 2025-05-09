@@ -5,7 +5,7 @@ installCursor() {
         echo "Installing Cursor AI IDE on Ubuntu 22.04..."
 
         # 📝 Enter the AppImage download URL
-        read -p "Enter Cursor AppImage URL (Download file .AppImage from https://www.cursor.com/downloads): " CURSOR_URL
+        read -p "Enter Cursor AppImage URL " CURSOR_URL
         # 📝 Enter the icon file name (e.g., cursor-icon.png or cursor-black-icon.png)
         read -p "Enter icon filename (from GitHub): " ICON_NAME
 
