@@ -15,7 +15,7 @@ installCursor() {
 
     # Default values
     DEFAULT_CURSOR_PATH="$(ls -t $HOME/Downloads/Cursor*.AppImage | head -n 1)"
-    DEFAULT_ICON_NAME="cursor-icon.png"
+    DEFAULT_ICON_NAME="cursor-black-icon.png"
 
     echo "Installing Cursor AI IDE on Ubuntu..."
 
