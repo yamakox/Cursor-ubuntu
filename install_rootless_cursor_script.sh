@@ -14,13 +14,13 @@ installCursor() {
     DESKTOP_ENTRY_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/applications/Cursor.desktop"
 
     # Default values
-    DEFAULT_CURSOR_PATH="$(ls -t $HOME/Downloads/Cursor*.AppImage | head -n 1)"
+    DEFAULT_CURSOR_PATH="$(ls -t $HOME/Downloads/Cursor*.AppImage 2> /dev/null | head -n 1)"
     DEFAULT_ICON_NAME="cursor-black-icon.png"
 
     echo "Installing Cursor AI IDE on Ubuntu..."
 
-    # 📝 Enter the downloaded Cursor.AppImage path
-    read -p "Enter the downloaded Cursor.AppImage path (default: $DEFAULT_CURSOR_PATH): " CURSOR_PATH
+    # 📝 Enter the downloaded Cursor AppImage path
+    read -p "Enter the downloaded Cursor AppImage path (default: $DEFAULT_CURSOR_PATH): " CURSOR_PATH
     CURSOR_PATH="${CURSOR_PATH:-$DEFAULT_CURSOR_PATH}"
 
     # 📝 Enter the icon file name (e.g., cursor-icon.png or cursor-black-icon.png)
@@ -52,7 +52,7 @@ installCursor() {
 
     # Create a .desktop entry for Cursor
     echo "Creating .desktop entry for Cursor..."
-    sudo bash -c "cat > $DESKTOP_ENTRY_PATH" <<EOL
+    bash -c "cat > $DESKTOP_ENTRY_PATH" <<EOL
 [Desktop Entry]
 Name=Cursor AI IDE
 Exec=$APPIMAGE_PATH --no-sandbox
@@ -62,8 +62,10 @@ Categories=Development;
 EOL
 
     echo "✅ Cursor AI IDE installation complete. You can find it in your application menu."
-    echo "If you want cursor command, you can add it to your .bashrc file:"
+    echo "If you want cursor command, you can add the following line to your .bashrc file:"
+    echo
     echo "alias cursor='\$HOME/.local/bin/Cursor.AppImage --no-sandbox'"
+    echo
 }
 
 installCursor
