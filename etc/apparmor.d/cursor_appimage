@@ -1,4 +1,4 @@
- This profile allows everything and only exists to give the
+# This profile allows everything and only exists to give the
 # application a name instead of having the label "unconfined"
 
 abi <abi/4.0>,
