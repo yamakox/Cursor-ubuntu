@@ -55,16 +55,20 @@ installCursor() {
     bash -c "cat > $DESKTOP_ENTRY_PATH" <<EOL
 [Desktop Entry]
 Name=Cursor AI IDE
-Exec=$APPIMAGE_PATH --no-sandbox
+Exec=$APPIMAGE_PATH
 Icon=$ICON_PATH
 Type=Application
 Categories=Development;
 EOL
 
     echo "✅ Cursor AI IDE installation complete. You can find it in your application menu."
+    echo
+    echo "Please copy ./etc/apparmor.d/cursor_appimage to /etc/apparmor.d/cursor_appimage"
+    echo "and run 'sudo systemctl reload apparmor.service' to apply the changes."
+    echo
     echo "If you want cursor command, you can add the following line to your .bashrc file:"
     echo
-    echo "alias cursor='\$HOME/.local/bin/Cursor.AppImage --no-sandbox'"
+    echo "alias cursor='\$HOME/.local/bin/Cursor.AppImage'"
     echo
 }
 

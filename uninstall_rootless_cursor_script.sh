@@ -33,7 +33,7 @@ uninstallCursor() {
     echo "✅ Cursor AI IDE has been uninstalled successfully."
     echo "If you added cursor command, please remove the following line from your .bashrc file:"
     echo
-    echo "alias cursor='\$HOME/.local/bin/Cursor.AppImage --no-sandbox'"
+    echo "alias cursor='\$HOME/.local/bin/Cursor.AppImage'"
     echo
 }
 

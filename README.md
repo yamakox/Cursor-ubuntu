@@ -32,7 +32,7 @@ This is a guideline for installing Cursor on Ubuntu.
    - After installation, you can find Cursor in your application menu
    - Alternatively, you can launch it from the terminal:
      ```bash
-     /opt/Cursor/cursor.appimage --no-sandbox
+     /opt/Cursor/cursor.appimage
      ```
 
 ## Installation Details

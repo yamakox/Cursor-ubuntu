@@ -41,7 +41,7 @@ installCursor() {
         sudo bash -c "cat > $DESKTOP_ENTRY_PATH" <<EOL
 [Desktop Entry]
 Name=Cursor AI IDE
-Exec=$APPIMAGE_PATH --no-sandbox
+Exec=$APPIMAGE_PATH
 Icon=$ICON_PATH
 Type=Application
 Categories=Development;
