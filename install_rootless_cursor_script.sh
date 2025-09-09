@@ -63,7 +63,7 @@ EOL
 
     echo "✅ Cursor AI IDE installation complete. You can find it in your application menu."
     echo
-    echo "Please copy ./etc/apparmor.d/cursor_rootless to /etc/apparmor.d/cursor_rootless"
+    echo "Please copy ./etc/apparmor.d/cursor-rootless to /etc/apparmor.d/cursor-rootless"
     echo "and run 'sudo systemctl reload apparmor.service' to apply the changes."
     echo
     echo "If you want cursor command, you can add the following line to your .bashrc file:"
